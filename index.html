@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="bk"></div>
+    <div class="container">
+      <header>
+        <h1>TODO
+          <span class="switch-btn"><img class="sun" src="/img/icon-sun.svg" alt="" srcset="">
+          <img src="/img/icon-moon.svg" class="moon" alt="" srcset=""></span>
+        </h1>
+      </header>
+      <form>
+        <input type="text" id="input-text" placeholder="Create a new todo..." class="input-text">
+        <div class="checkbox-2"></div>
+        <button class="btn" type="submit"><i class="fas fa-plus"></i></button>
+      </form>
+      <div class="todo-container">
+        <ul class="list"></ul>
+        <div class="footer"><div class="todo-li">
+         <div class="select">
+          <button value="all" class="all">All</button>
+            <button value="active" class="active">Active</button>
+            <button value="completed" class="completed">Completed</button>
+          <button value="clear" class="clear">Clear Completed</button>
+         </div>
+        </div></div>
+      </div>
+
+    </div>
+    <p>Credit by <a href="https://github.com/nabilotchi">NABIL OTCHI</a></p>
+  </body>
+  <script src="app.js"></script>
+</html>
