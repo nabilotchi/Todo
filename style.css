@@ -206,6 +206,7 @@ form .btn:hover {
 }
 
 .todo-li {
+  position: relative;
   width: 45rem;
   height: 5rem;
   color: #b0b2cb;
@@ -288,14 +289,9 @@ form .btn:hover {
 .completed {
   margin-right: 10rem;
 }
-.footer {
-  opacity: 0;
-}
+
 .list {
   opacity: 0;
-}
-.footer-t {
-  opacity: 1;
 }
 .list {
   opacity: 1;
@@ -368,15 +364,6 @@ img {
 .complete-btn-end:hover {
   opacity: 1;
 }
-.fall {
-  opacity: 0;
-}
-.none {
-  opacity: 0;
-}
-/* .list .todo-li:empty {
-  display: none;
-} */
 @keyframes circle {
   0% {
     transform: rotate(0rad);
@@ -397,5 +384,10 @@ img {
   animation-duration: 0.09s;
 }
 .true {
+  display: none;
+}
+.list:empty ~ .footer,
+.list:empty,
+.todo-li:empty ~ .footer {
   display: none;
 }

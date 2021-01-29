@@ -63,23 +63,7 @@ function addTodo(event) {
     list.appendChild(todoDiv);
     inputText.value = '';
 };
-function check() {
-    event.preventDefault();
 
-  var empt = document.getElementsByClassName('list').innerHTML;
-  var testTT = document.getElementsByClassName('footer');
-  const todo = document.getElementsByClassName('todo');
-  if (empt == null || empt == "")
-  {
-    
-    return false;
-  }
-  else 
-  {
-    todo.remove();
-      return true; 
-  }
-}
 function deleteTodo(e){
     const item = e.target;
     //delete
@@ -155,9 +139,6 @@ const todoList = document.createElement("li");
 todoList.classList.add("todo-li");
 todoList.innerText = todo;
 todoDiv.appendChild(todoList);
-//toogles
-const footerT = document.querySelector(".footer");
-footerT.classList.add("footer-t");
 // checkMark2
 const completeBtnS = document.createElement("div");
 completeBtnS.classList.add("checkbox-12");
@@ -182,21 +163,3 @@ function removeLocalTodos(todo){
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem('todos', JSON.stringify(todos));
 }
-
-
-
-
-const box = document.querySelector('.footer');
-const rect = box.getBoundingClientRect();
-
-
-        function myFunction() {
-            if (rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
-              console.log("true");
-            } else {
-                console.log("false");
-            }
-          }
